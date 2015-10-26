@@ -18,4 +18,6 @@ class PatientViewTest(TestCase):
 
     def test_agent_should_see_correct_patient_data(self):
         response = self.client.get(self.url)
-        pass
+        
+        expected = '<td style="width:100px">med_id'
+        self.assertContains(response, expected, status_code=200)

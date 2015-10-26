@@ -7,4 +7,10 @@ from .models import Patient
 
 
 def view_patient_data(request):
-	pass
+	template_name = '../templates/data.html'
+
+	return render(
+		request,
+		template_name,
+		{} #data
+	)
